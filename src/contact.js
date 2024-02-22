@@ -1,10 +1,11 @@
 export default function contact() {
   const content = document.querySelector("#content");
 
-  const title = document.createElement("h1");
+  const title = document.createElement("h2");
   title.textContent = "Contact Us";
 
-  const subHeader = document.createElement("h2");
+  const subHeader = document.createElement("h3");
+  subHeader.classList.add("subheader");
   subHeader.textContent =
     "Feel free to reach out to us for any inquiries, feedback, or to make a reservation";
 
@@ -17,7 +18,7 @@ export default function contact() {
   // Address section
   const address = document.createElement("div");
   address.classList.add("address");
-  const addressHeader = document.createElement("h3");
+  const addressHeader = document.createElement("h4");
   addressHeader.textContent = "Address:";
   address.appendChild(addressHeader);
   const addressLines = [
@@ -35,7 +36,7 @@ export default function contact() {
   // Phone section
   const phone = document.createElement("div");
   phone.classList.add("phone");
-  const phoneHeader = document.createElement("h3");
+  const phoneHeader = document.createElement("h4");
   phoneHeader.textContent = "Phone:";
   phone.appendChild(phoneHeader);
   const phoneLine = document.createElement("p");
@@ -45,7 +46,7 @@ export default function contact() {
   // Email Section
   const email = document.createElement("div");
   email.classList.add("email");
-  const emailHeader = document.createElement("h3");
+  const emailHeader = document.createElement("h4");
   emailHeader.textContent = "Email:";
   email.appendChild(emailHeader);
   const emailLine = document.createElement("p");
@@ -55,7 +56,7 @@ export default function contact() {
   // Socials Section
   const socials = document.createElement("div");
   socials.classList.add("socials");
-  const socialsHeader = document.createElement("h3");
+  const socialsHeader = document.createElement("h4");
   socialsHeader.textContent = "Social Media:";
   socials.appendChild(socialsHeader);
   const socialsLines = [
@@ -70,13 +71,15 @@ export default function contact() {
   });
 
   // Add all contact sections to contact card
+  contactCard.appendChild(title);
+  contactCard.appendChild(subHeader);
   contactCard.appendChild(address);
   contactCard.appendChild(phone);
   contactCard.appendChild(email);
   contactCard.appendChild(socials);
 
   // Add all content to content section
-  content.appendChild(title);
-  content.appendChild(subHeader);
+  // content.appendChild(title);
+  // content.appendChild(subHeader);
   content.appendChild(contactCard);
 }

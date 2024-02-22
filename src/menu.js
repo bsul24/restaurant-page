@@ -53,7 +53,7 @@ export default function menu() {
   ];
 
   const content = document.querySelector("#content");
-  const title = document.createElement("h1");
+  const title = document.createElement("h2");
 
   title.textContent = "Menu";
 
@@ -67,10 +67,12 @@ export default function menu() {
     itemName.textContent = item.name;
 
     const itemDesc = document.createElement("p");
+    itemDesc.classList.add("itemDesc");
     itemDesc.textContent = item.desc;
 
     const itemPrice = document.createElement("p");
-    itemPrice.textContent = item.price;
+    itemPrice.classList.add("price");
+    itemPrice.textContent = `$${item.price}`;
 
     itemCard.appendChild(itemName);
     itemCard.appendChild(itemDesc);

@@ -17,12 +17,28 @@ body {
 }
 
 h1 {
+  font-size: 75px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+h2 {
   font-size: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
 }
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 40px;
@@ -50,8 +66,10 @@ button {
 }
 
 #content {
-  margin: 0 auto 40px;
-  width: 1000px;
+  margin: 60px auto 40px;
+  border: 4px solid white;
+  padding-top: 30px;
+  width: 800px;
   max-width: 85%;
   display: flex;
   flex-direction: column;
@@ -59,14 +77,56 @@ button {
   background-color: #868e96;
 }
 
+.homeCard {
+  text-align: center;
+  font-size: 24px;
+  padding: 30px 40px;
+}
+
+.homeCard p {
+  margin-bottom: 20px;
+}
+
 .itemCard {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
   max-width: 85%;
   margin-bottom: 40px;
+  padding: 25px 40px 20px;
+  background-color: #212529;
+  border: 2px solid white;
+  border-radius: 11px;
 }
 
 .itemCard h3 {
+  font-size: 24px;
   text-align: center;
+  margin-bottom: 18px;
+}
+
+.itemDesc {
+  margin-bottom: 8px;
+  max-width: 250px;
+  text-align: center;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  text-align: center;
+  padding: 0 50px 30px;
+}
+
+.subheader {
+  margin-bottom: 30px;
 }
